@@ -20,28 +20,6 @@
 
     <py-script>
 
-import pandas as pd 
-
-from pyodide.http import open_url
-
-gsheetid = "1-1jbgiAfNkhUyPpUazLP_hqVxaPLBbgaLoozS07LPj4"
-sheet_name = "Data"
-URL = 'https://docs.google.com/spreadsheets/d/{}/gviz/tq?tqx=out:csv&sheet={}'.format(
-	gsheetid,
-	sheet_name
-)
-
-url_content=URL
-
-
-df = pd.read_csv(open_url(url_content))
-
-#print(df)
-     
-csv = Element('csv')
-
-csv.write(df)
-
     </py-script>
 
 </body>
